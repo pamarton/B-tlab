@@ -39,12 +39,10 @@ xlim([0,1.5])
 xlabel('Angular frequency, rad')
 ylabel('Estimated Spectral Density')
 
-%% Curve fitting
+%% Curve fitting in part 5.2.d
 P_psi = @(lambda,omega)((2*lambda*omega_0*sigma)^2.*omega.^2) ./...
-    ((omega_0^2 - omega.^2) + (2*lambda*omega_0^2.*omega.^2));
-%/ ((omega_0^2 - omega_vector.^2) +...
- %   (2*lambda*omega_0^2.*omega_vector.^2));
-x0 = 0.1;
+    (omega_0^4 +  + omega.^4 + 2*omega_0^2*omega.^2*(2*lambda^2 - 1));
+x0 = 1;
 lambda_fitted = lsqcurvefit(P_psi,x0,omega,S_psi);
 %% Plotting curve fitting in part 5.2.d
 figure
@@ -54,4 +52,4 @@ xlim([0,1.5])
 plot(omega, P_psi(lambda_fitted,omega))
 %xlim([0,1.5])
 xlabel('Angular frequency, rad')
-ylabel('Estimated Spectral Density')
+ylabel('Estimated and analytical PSD')
