@@ -1,0 +1,5 @@
+%% Constants
+pi = 3.14;
+% Sampling frequency in Hertz
+fs = 10;
+window = 4096;
