@@ -13,10 +13,13 @@ nfft = [];
 %% Loading wave matrix
 load('wave.mat')
 
-
 %% Estimating Power Spectral Density PSD
 [pxx,f] = pwelch(psi_w(2,:).*pi/180,window,noverlap,nfft,fs);
 % Scaling power per Hz to power s/rad
 pxx = pxx*1/(2*pi);
 % Scaling frequency to rad/s
 omega = f*2*pi;
+
+%% Plotting psi as in part 5.2.c
+plot(pxx(1:150,1))
+% TODO: add annotation
