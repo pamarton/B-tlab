@@ -13,6 +13,10 @@ nfft = [];
 %% Loading wave matrix
 load('wave.mat')
 
+%% Loading constants from '../../Data'
+addpath('../../Data');
+load('var_o1b.mat');
+
 %% Estimating Power Spectral Density PSD
 [S_psi,f] = pwelch(psi_w(2,:).*pi/180,window,noverlap,nfft,fs);
 % Scaling power per Hz to power s/rad
@@ -53,3 +57,5 @@ plot(omega, P_psi(lambda_fitted,omega))
 %xlim([0,1.5])
 xlabel('Angular frequency, rad')
 ylabel('Estimated and analytical PSD')
+
+save('../Data/var_o2.mat','omega_0','lambda_fitted');

@@ -12,8 +12,8 @@ figNum = 1; % Figure number?counter
 PSI_r = 30; % Reference angle for simulation
 sim_t = 500;
 addpath('Datafiles') % Add folder for .mat-files
-load('constants_5.2.mat') % K_w, lambda, omega_0, sigma
-load('constants_5.3.mat') % K, K_pd, T, T_d, T_f, w_c
+%load('constants_5.2.mat') % K_w, lambda, omega_0, sigma
+%load('constants_5.3.mat') % K, K_pd, T, T_d, T_f, w_c
 
 % \\\ X and Y output of ship
 % in task 5.3.b/c/d ///
@@ -43,7 +43,7 @@ Q = [30 0; 0 1e-06];
 % Initial a priori state estimate
 x_0_minus = zeros(5,1);
 
-
+%{
 %% Task 5.5.c ???? Discrete Kalman Filter
  R = R/T_s;
  I = diag([1 1 1 1 1]);
@@ -52,6 +52,8 @@ x_0_minus = zeros(5,1);
 data = struct('Ad',Ad,'Bd',Bd,'Cd',Cd,'Ed', Ed, 'Q',Q,'R', R,'P_0',P_0, ...
 'X_0',X_0, 'I', I);
 %
+
+
 
 function [b,psi] = Kalman_matlab_fnc(u, y, data)
 %#codegen
@@ -74,3 +76,4 @@ x_ = A*x + B*u;
 P_ = A*P*A' + E*Q*E';
 psi = x(3); b = x(5);
 end
+%}
