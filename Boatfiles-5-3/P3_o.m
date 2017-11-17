@@ -20,16 +20,16 @@ addpath('b/');
 load_system('op5_3b.slx');
 sim('op5_3b.slx');
 plot(s_xy(:,1),s_xy(:,2));
-save('../Data/var_o3b.mat','w_c','T_f','T_d','K_pd','s_t','s_compass','s_xy','s_delta','s_course_angle','s_course_angle_ref');
+save('../Data/var_o3b.mat','w_c','T_f','T_d','K_pd','s_t','s_compass','s_xy','s_delta','s_course_angle','s_course_angle_ref','course_angle');
 
 addpath('c/');
 load_system('op5_3c.slx');
 sim('op5_3c.slx');
 plot(s_xy(:,1),s_xy(:,2));
-save('../Data/var_o3c.mat','w_c','T_f','T_d','K_pd','s_t','s_compass','s_xy','s_delta','s_course_angle','s_course_angle_ref');
+save('../Data/var_o3c.mat','w_c','T_f','T_d','K_pd','s_t','s_compass','s_xy','s_delta','s_course_angle','s_course_angle_ref','course_angle');
 
 addpath('d/');
 load_system('op5_3d.slx');
 sim('op5_3d.slx');
 plot(s_xy(:,1),s_xy(:,2));
-save('../Data/var_o3d.mat','w_c','T_f','T_d','K_pd','s_t','s_compass','s_xy','s_delta','s_course_angle','s_course_angle_ref');
+save('../Data/var_o3d.mat','w_c','T_f','T_d','K_pd','s_t','s_compass','s_xy','s_delta','s_course_angle','s_course_angle_ref','course_angle');
