@@ -18,7 +18,18 @@ course_angle_error = 45;
 rad2deg = 180/pi;
 deg2rad = pi/180;
 
-load_
-plot(s_xy(:,1),s_xy(:,2));
+load_system('p5p5e_simulink.mdl');
+sim('p5p5e_simulink.mdl');
 
-save('var_o5c.mat');
+hold on
+plot(s_t,s_compass);
+plot(s_t,s_course_angle_ref);
+load('var_o1b.mat');
+load('var_o2.mat');
+load('var_o3d.mat');
+
+plot(s_t,s_compass);%5.3.d
+hold off
+
+
+save('../Data/var_o5e.mat');

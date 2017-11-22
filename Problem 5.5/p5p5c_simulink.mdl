@@ -1,12 +1,12 @@
 Model {
-  Name			  "p5p5c_simulink"
+  Name			  "p5p5d_simulink"
   Version		  8.9
   SavedCharacterEncoding  "windows-1252"
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.29"
+    ComputedModelVersion    "1.31"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -68,8 +68,8 @@ Model {
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
 	Extents			[920.0, 866.0]
-	ZoomFactor		[1.25]
-	Offset			[-137.09426969981604, 86.244655981923586]
+	ZoomFactor		[0.6]
+	Offset			[-588.04067593217246, -56.585730738984012]
       }
       Object {
 	$PropName		"DockComponentsInfo"
@@ -103,9 +103,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "pamarton"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Nov 22 10:32:42 2017"
-  RTWModifiedTimeStamp	  433247538
-  ModelVersionFormat	  "1.%<AutoIncrement:29>"
+  LastModifiedDate	  "Wed Nov 22 10:57:55 2017"
+  RTWModifiedTimeStamp	  433249055
+  ModelVersionFormat	  "1.%<AutoIncrement:31>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -157,11 +157,11 @@ Model {
     $PropName		    "DataLoggingOverride"
     $ObjectID		    7
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
-    model_		    "p5p5c_simulink"
+    model_		    "p5p5d_simulink"
     Array {
       Type		      "Cell"
       Dimension		      1
-      Cell		      "p5p5c_simulink"
+      Cell		      "p5p5d_simulink"
       PropName		      "logAsSpecifiedByModels_"
     }
     Array {
@@ -1167,7 +1167,7 @@ Model {
     }
   }
   System {
-    Name		    "p5p5c_simulink"
+    Name		    "p5p5d_simulink"
     Location		    [-7, 0, 967, 1047]
     Open		    on
     PortBlocksUseCompactNotation off
@@ -1181,7 +1181,7 @@ Model {
     TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "125"
+    ZoomFactor		    "60"
     ReportName		    "simulink-default.rpt"
     SIDHighWatermark	    "64"
     Block {
@@ -1224,7 +1224,7 @@ Model {
 	    Type		    "checkbox"
 	    Name		    "logic"
 	    Prompt		    "waves"
-	    Value		    "off"
+	    Value		    "on"
 	  }
 	  PropName		  "Parameters"
 	}
@@ -1846,7 +1846,7 @@ Model {
 	  BlockType		  S-Function
 	  Name			  " SFunction "
 	  SID			  "64::22"
-	  Tag			  "Stateflow S-Function p5p5c_simulink 2"
+	  Tag			  "Stateflow S-Function p5p5d_simulink 2"
 	  Ports			  [2, 3]
 	  Position		  [180, 100, 230, 180]
 	  ZOrder		  12
@@ -1950,8 +1950,9 @@ Model {
       BlockType		      Memory
       Name		      "Memory1"
       SID		      "60"
-      Position		      [75, 475, 105, 505]
-      ZOrder		      34
+      Position		      [605, 370, 635, 400]
+      ZOrder		      42
+      BlockRotation	      270
       BlockMirror	      on
     }
     Block {
@@ -2122,7 +2123,7 @@ Model {
       Name		      "To Workspace2"
       SID		      "48"
       Ports		      [1]
-      Position		      [-415, 135, -355, 165]
+      Position		      [-415, 132, -330, 168]
       ZOrder		      18
       VariableName	      "s_course_angle_ref"
       MaxDataPoints	      "inf"
@@ -2367,13 +2368,6 @@ Model {
       DstPort		      1
     }
     Line {
-      ZOrder		      144
-      SrcBlock		      "MATLAB Function"
-      SrcPort		      2
-      DstBlock		      "Memory1"
-      DstPort		      1
-    }
-    Line {
       ZOrder		      145
       SrcBlock		      "Zero-Order\nHold (Ts)1"
       SrcPort		      1
@@ -2405,47 +2399,33 @@ Model {
       ZOrder		      3
       SrcBlock		      "Cargo ship"
       SrcPort		      1
-      Points		      [42, 0]
+      Points		      [40, 0]
       Branch {
-	ZOrder			106
-	Points			[0, 300]
+	ZOrder			165
+	Points			[2, 0]
 	Branch {
-	  ZOrder		  112
-	  DstBlock		  "Zero-Order\nHold (Ts)1"
+	  ZOrder		  41
+	  Points		  [0, -100]
+	  DstBlock		  "To Workspace5"
 	  DstPort		  1
 	}
 	Branch {
-	  ZOrder		  111
-	  Points		  [0, 88; -1077, 0; 0, -293]
-	  Branch {
-	    ZOrder		    113
-	    DstBlock		    "Sum"
-	    DstPort		    2
-	  }
-	  Branch {
-	    ZOrder		    107
-	    DstBlock		    "To Workspace3"
-	    DstPort		    1
-	  }
+	  ZOrder		  13
+	  Points		  [58, 0; 0, -40]
+	  DstBlock		  "Scope"
+	  DstPort		  1
 	}
       }
       Branch {
-	ZOrder			41
-	Points			[0, -100]
-	DstBlock		"To Workspace5"
-	DstPort			1
-      }
-      Branch {
-	ZOrder			13
-	Points			[58, 0; 0, -40]
-	DstBlock		"Scope"
+	ZOrder			106
+	DstBlock		"Memory1"
 	DstPort			1
       }
     }
     Line {
-      ZOrder		      119
-      SrcBlock		      "Memory1"
-      SrcPort		      1
+      ZOrder		      168
+      SrcBlock		      "MATLAB Function"
+      SrcPort		      2
       DstBlock		      "To Workspace7"
       DstPort		      1
     }
@@ -2455,14 +2435,39 @@ Model {
       SrcPort		      1
       Points		      [-20, 0]
       Branch {
-	ZOrder			121
+	ZOrder			162
+	DstBlock		"Sum1"
+	DstPort			2
+      }
+      Branch {
+	ZOrder			161
 	DstBlock		"To Workspace6"
 	DstPort			1
       }
+    }
+    Line {
+      ZOrder		      164
+      SrcBlock		      "Memory1"
+      SrcPort		      1
+      Points		      [0, 85]
       Branch {
-	ZOrder			120
-	DstBlock		"Sum1"
-	DstPort			2
+	ZOrder			166
+	Points			[0, 88; -1075, 0; 0, -293]
+	Branch {
+	  ZOrder		  113
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+	Branch {
+	  ZOrder		  107
+	  DstBlock		  "To Workspace3"
+	  DstPort		  1
+	}
+      }
+      Branch {
+	ZOrder			112
+	DstBlock		"Zero-Order\nHold (Ts)1"
+	DstPort			1
       }
     }
   }
@@ -2475,7 +2480,7 @@ Model {
 Stateflow {
   machine {
     id			    1
-    name		    "p5p5c_simulink"
+    name		    "p5p5d_simulink"
     created		    "17-Nov-2017 15:48:54"
     isLibrary		    0
     sfVersion		    80000011
@@ -2490,9 +2495,6 @@ Stateflow {
     screen		    [1 1 3600 1200 1.180555555555556]
     treeNode		    [0 3 0 0]
     viewObj		    2
-    visible		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    8
     decomposition	    CLUSTER_CHART
     type		    EML_CHART

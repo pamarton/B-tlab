@@ -36,4 +36,4 @@ course_angle_error = 45;
 rad2deg = 180/pi;
 deg2rad = pi/180;
 
-save('var_o5c.mat');
+save('../Data/var_o5c.mat');

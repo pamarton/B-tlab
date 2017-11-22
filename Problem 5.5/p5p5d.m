@@ -22,12 +22,14 @@ load_system('p5p5d_simulink.mdl');
 sim('p5p5d_simulink.mdl');
 
 hold on
-plot(s_t,s_compass);
-plot(s_t,s_course_angle_ref);
+plot(s_t,s_delta);%Kalman
+%plot(s_t,s_course_angle_ref);
+
+load('var_o1b.mat');
+load('var_o2.mat');
+load('var_o3c.mat');
+
+plot(s_t,s_delta);%5.3.c
 hold off
 
-hold on
-plot(s_t,s_delta);
-hold off
-
-save('var_o5c.mat');
+save('../Data/var_o5d.mat');
