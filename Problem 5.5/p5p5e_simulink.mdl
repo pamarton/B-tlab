@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.33"
+    ComputedModelVersion    "1.35"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -68,8 +68,8 @@ Model {
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
 	Extents			[920.0, 866.0]
-	ZoomFactor		[1.25]
-	Offset			[-296.68333333333385, 111.48093592768248]
+	ZoomFactor		[0.8]
+	Offset			[-533.21666666666761, -81.48573073898433]
       }
       Object {
 	$PropName		"DockComponentsInfo"
@@ -103,9 +103,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "pamarton"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Nov 22 11:19:16 2017"
-  RTWModifiedTimeStamp	  433250352
-  ModelVersionFormat	  "1.%<AutoIncrement:33>"
+  LastModifiedDate	  "Wed Nov 22 11:30:42 2017"
+  RTWModifiedTimeStamp	  433251038
+  ModelVersionFormat	  "1.%<AutoIncrement:35>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1181,7 +1181,7 @@ Model {
     TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "125"
+    ZoomFactor		    "80"
     ReportName		    "simulink-default.rpt"
     SIDHighWatermark	    "66"
     Block {
@@ -1950,9 +1950,8 @@ Model {
       BlockType		      Memory
       Name		      "Memory1"
       SID		      "60"
-      Position		      [605, 310, 635, 340]
-      ZOrder		      43
-      BlockRotation	      270
+      Position		      [20, 550, 50, 580]
+      ZOrder		      44
       BlockMirror	      on
     }
     Block {
@@ -2136,7 +2135,7 @@ Model {
       Name		      "To Workspace3"
       SID		      "49"
       Ports		      [1]
-      Position		      [-415, 255, -355, 285]
+      Position		      [-415, 255, -340, 285]
       ZOrder		      19
       VariableName	      "s_course_angle"
       MaxDataPoints	      "inf"
@@ -2179,20 +2178,6 @@ Model {
       ZOrder		      39
       BlockMirror	      on
       VariableName	      "s_b"
-      MaxDataPoints	      "inf"
-      Save2DSignal	      "3-D array (concatenate along third dimension)"
-      FixptAsFi		      on
-      SampleTime	      "-1"
-    }
-    Block {
-      BlockType		      ToWorkspace
-      Name		      "To Workspace7"
-      SID		      "63"
-      Ports		      [1]
-      Position		      [-65, 475, 25, 505]
-      ZOrder		      40
-      BlockMirror	      on
-      VariableName	      "s_spi"
       MaxDataPoints	      "inf"
       Save2DSignal	      "3-D array (concatenate along third dimension)"
       FixptAsFi		      on
@@ -2396,37 +2381,11 @@ Model {
       DstPort		      1
     }
     Line {
-      ZOrder		      3
-      SrcBlock		      "Cargo ship"
-      SrcPort		      1
-      Points		      [40, 0]
-      Branch {
-	ZOrder			168
-	Points			[2, 0]
-	Branch {
-	  ZOrder		  41
-	  Points		  [0, -100]
-	  DstBlock		  "To Workspace5"
-	  DstPort		  1
-	}
-	Branch {
-	  ZOrder		  13
-	  Points		  [58, 0; 0, -40]
-	  DstBlock		  "Scope"
-	  DstPort		  1
-	}
-      }
-      Branch {
-	ZOrder			106
-	DstBlock		"Memory1"
-	DstPort			1
-      }
-    }
-    Line {
       ZOrder		      166
       SrcBlock		      "MATLAB Function"
       SrcPort		      2
-      DstBlock		      "To Workspace7"
+      Points		      [-45, 0; 0, 75]
+      DstBlock		      "Memory1"
       DstPort		      1
     }
     Line {
@@ -2446,29 +2405,47 @@ Model {
       }
     }
     Line {
-      ZOrder		      167
-      SrcBlock		      "Memory1"
+      ZOrder		      3
+      SrcBlock		      "Cargo ship"
       SrcPort		      1
-      Points		      [0, 145]
+      Points		      [40, 0]
       Branch {
-	ZOrder			171
-	Points			[2, 0]
+	ZOrder			190
+	Points			[0, 300]
 	DstBlock		"Zero-Order\nHold (Ts)1"
 	DstPort			1
       }
       Branch {
-	ZOrder			170
-	Points			[0, 78; -1075, 0; 0, -298]
+	ZOrder			168
+	Points			[2, 0]
 	Branch {
-	  ZOrder		  180
-	  DstBlock		  "To Workspace3"
+	  ZOrder		  41
+	  Points		  [0, -100]
+	  DstBlock		  "To Workspace5"
 	  DstPort		  1
 	}
 	Branch {
-	  ZOrder		  179
-	  DstBlock		  "Sum"
-	  DstPort		  2
+	  ZOrder		  13
+	  Points		  [58, 0; 0, -40]
+	  DstBlock		  "Scope"
+	  DstPort		  1
 	}
+      }
+    }
+    Line {
+      ZOrder		      188
+      SrcBlock		      "Memory1"
+      SrcPort		      1
+      Points		      [-470, 0; 0, 1; 0, -296]
+      Branch {
+	ZOrder			187
+	DstBlock		"To Workspace3"
+	DstPort			1
+      }
+      Branch {
+	ZOrder			185
+	DstBlock		"Sum"
+	DstPort			2
       }
     }
   }

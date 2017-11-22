@@ -22,8 +22,9 @@ load_system('p5p5e_simulink.mdl');
 sim('p5p5e_simulink.mdl');
 
 hold on
+plot(s_t,s_course_angle);
 plot(s_t,s_compass);
-plot(s_t,s_course_angle_ref);
+%plot(s_t,s_course_angle_ref);
 load('var_o1b.mat');
 load('var_o2.mat');
 load('var_o3d.mat');
