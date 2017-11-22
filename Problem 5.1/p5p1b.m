@@ -16,7 +16,6 @@ w_2 = 0.05;
 T = ((A_2^2 * w_2^2 - A_1^2 * w_1^2)/(A_1^2 * w_1^4 - A_2^2 * w_2^4))^(1/2);
 K = A_1 * (w_1^4 * T^2 + w_1^2)^(1/2);
 
-TEMP = 9001;
 
 load_system('p5p1b_simulink.mdl');
 sim('p5p1b_simulink.mdl');

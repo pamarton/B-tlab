@@ -18,17 +18,7 @@ Cd = C;
 Dd = 0;
 
 
-
-%% Part 5.5.b  
-% R = E{v^2} = measurement noise variance / Tss
-load_system('op5_3d.slx');
-sim('op5_3d.slx');
-plot(s_xy(:,1),s_xy(:,2));
-save('../Data/var_o3d.mat','w_c','T_f','T_d','K_pd','s_t','s_compass','s_xy','s_delta','s_course_angle','s_course_angle_ref','course_angle');
-
-R = var(s_compass*pi/180);
-%
-%% Matrices given in part 5.5.c
+%% Matrices from 5.5.c
 % Initial a priori estimate error covariance
 P_0_minus = [1 0 0 0 0; 0 0.013 0 0 0; 0 0 pi^2 0 0; 0 0 0 1 0;
     0 0 0 0 2.5e-03];

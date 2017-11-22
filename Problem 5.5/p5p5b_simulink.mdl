@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.18"
+    ComputedModelVersion    "1.21"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -43,7 +43,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [83.0, 52.0, 1449.0, 1084.0]
+      Location		      [-174.0, 98.0, 1449.0, 1084.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -103,9 +103,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "pamarton"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Fri Nov 17 15:43:16 2017"
-  RTWModifiedTimeStamp	  432831694
-  ModelVersionFormat	  "1.%<AutoIncrement:18>"
+  LastModifiedDate	  "Wed Nov 22 09:01:33 2017"
+  RTWModifiedTimeStamp	  433242084
+  ModelVersionFormat	  "1.%<AutoIncrement:21>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -212,7 +212,7 @@ Model {
 	  DisabledProps		  []
 	  Description		  ""
 	  StartTime		  "0.0"
-	  StopTime		  "100"
+	  StopTime		  "simulation_time"
 	  AbsTol		  "auto"
 	  FixedStep		  "auto"
 	  InitialStep		  "auto"
@@ -1130,7 +1130,7 @@ Model {
   }
   System {
     Name		    "p5p5b_simulink"
-    Location		    [83, 52, 1532, 1136]
+    Location		    [-174, 98, 1275, 1182]
     Open		    on
     PortBlocksUseCompactNotation off
     ModelBrowserVisibility  off
@@ -1313,9 +1313,9 @@ Model {
 	  SourceProductName	  "Simulink"
 	  SourceProductBaseCode	  "SL"
 	  ContentPreviewEnabled	  off
-	  Cov			  [0.001]
+	  Cov			  "[0.001]"
 	  Ts			  ".5"
-	  seed			  [23341]
+	  seed			  "[23341]"
 	  VectorParams1D	  on
 	}
 	Block {
@@ -1753,7 +1753,6 @@ Model {
       ZOrder		      2
       VariableName	      "s_t"
       MaxDataPoints	      "inf"
-      SaveFormat	      "Timeseries"
       Save2DSignal	      "3-D array (concatenate along third dimension)"
       FixptAsFi		      on
       SampleTime	      "-1"
@@ -1767,7 +1766,6 @@ Model {
       ZOrder		      3
       VariableName	      "s_compass"
       MaxDataPoints	      "inf"
-      SaveFormat	      "Timeseries"
       Save2DSignal	      "3-D array (concatenate along third dimension)"
       FixptAsFi		      on
       SampleTime	      "-1"

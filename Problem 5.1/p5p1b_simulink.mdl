@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.20"
+    ComputedModelVersion    "1.22"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -69,7 +69,7 @@ Model {
 	LoadSaveID		"0"
 	Extents			[1870.0, 866.0]
 	ZoomFactor		[1.5]
-	Offset			[24.703386075694652, 38.466667064031014]
+	Offset			[15.853386075694402, 79.216667064031014]
       }
       Object {
 	$PropName		"DockComponentsInfo"
@@ -103,9 +103,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "pamarton"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Fri Nov 17 15:34:36 2017"
-  RTWModifiedTimeStamp	  432833655
-  ModelVersionFormat	  "1.%<AutoIncrement:20>"
+  LastModifiedDate	  "Wed Nov 22 08:56:19 2017"
+  RTWModifiedTimeStamp	  433241777
+  ModelVersionFormat	  "1.%<AutoIncrement:22>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1142,7 +1142,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "150"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "97"
+    SIDHighWatermark	    "129"
     Block {
       BlockType		      SubSystem
       Name		      "Cargo ship, freq = 0.005"
