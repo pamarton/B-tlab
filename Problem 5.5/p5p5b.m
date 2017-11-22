@@ -3,10 +3,10 @@ clc
 
 addpath('../Data') % Add folder for .mat-files
 
-load('var_o1b.mat')
+load('var_o1b.mat');
+load('var_o5a.mat');
 
 %% Problem 5.5.b  
-
 
 simulation_time = 10000; %High number to ensure an accurate variance
 load_system('p5p5b_simulink.mdl');
