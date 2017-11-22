@@ -14,7 +14,7 @@ nfft = [];
 load('wave.mat')
 
 %% Loading constants from '../../Data'
-addpath('../../Data');
+addpath('../Data');
 load('var_o1b.mat');
 
 %% Estimating Power Spectral Density PSD
